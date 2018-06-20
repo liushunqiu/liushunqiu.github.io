@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>路一直都在丶</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="路一直都在丶">
+<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:site_name" content="路一直都在丶">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="路一直都在丶">
+  
+    <link rel="alternate" href="/atom.xml" title="路一直都在丶" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">路一直都在丶</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-Linux各种命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/Linux各种命令/" class="article-date">
+  <time datetime="2018-04-29T14:59:14.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/Linux各种命令/">Linux各种命令</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.按进程消耗内存多少排序的方法，查看占据内存最大的前10个进程：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -e -o &apos;pid,comm,args,pcpu,rsz,vsz,stime,user,uid&apos; --sort -rsz|head -11</span><br></pre></td></tr></table></figure></p>
+<p>2.vmstat 1 查看CPU消耗<br>3.kill掉对应关键字的线程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef|grep 查询关键字 |grep -v grep|cut  -c 9-15|xargs kill -9</span><br></pre></td></tr></table></figure></p>
+<p>4.通过pid查看占用端口<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 进程PID</span><br></pre></td></tr></table></figure></p>
+<p>5.通过端口查看占用进程<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">netstat -nap|grep 端口号</span><br><span class="line">备注：windows下查看端口占用</span><br><span class="line">如:查询占用了8080端口的进程：netstat -ano|findstr &quot;8080&quot;</span><br></pre></td></tr></table></figure></p>
+<p>6.mvn 编译过慢<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn clean package -T 1C -Dmaven.test.skip=true  -Dmaven.compile.fork=true</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/Linux各种命令/" data-id="cjimid29v0008l4qfdipe2xhy" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CentOS7使用mailx发送邮件-通过postfix与mailx" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/" class="article-date">
+  <time datetime="2018-04-29T14:55:08.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/">CentOS7使用mailx发送邮件(通过postfix与mailx)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.先卸载掉sendmail<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove -y sendmail</span><br></pre></td></tr></table></figure></p>
+<p>2.安装postdix<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y postfix mailx cyrus-sasl-plain</span><br></pre></td></tr></table></figure></p>
+<p>3.这里我们使用163邮箱来发送邮件，首先到163邮箱官网里面设置smtp还有获取授权码<br><img src="/images/mailxsend.png" alt=""><br>4.编辑vim /etc/mail.rc,编辑内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set from=（发送人）</span><br><span class="line">set smtp=(发送邮件的stmp)smtps://smtp.163.com:994</span><br><span class="line">set smtp-auth=login</span><br><span class="line">set smtp-auth-user=(用户名)</span><br><span class="line">set smtp-auth-password=(授权码)</span><br><span class="line">set ssl-verify=ignore</span><br><span class="line">set nss-config-dir=/etc/pki/nssdb</span><br></pre></td></tr></table></figure></p>
+<p>5.测试发送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo “内容” | mailx -v -s &quot; 标题&quot; 收件人邮箱</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/" data-id="cjimid29m0001l4qfegre3pwd" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell/">Shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-图片服务器Fastdfs配置nginx缩略图" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/图片服务器Fastdfs配置nginx缩略图/" class="article-date">
+  <time datetime="2018-04-29T14:46:25.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/图片服务器Fastdfs配置nginx缩略图/">图片服务器Fastdfs配置nginx缩略图</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.下载并安装FastDFS依赖包libfastcommon<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">wget https://codeload.github.com/happyfish100/libfastcommon/zip/master</span><br><span class="line">unzip master</span><br><span class="line">cd libfastcommon-master/</span><br><span class="line">./make.sh</span><br><span class="line">./make.sh install</span><br></pre></td></tr></table></figure></p>
+<p>2.下载并安装FastDFS<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wget https://github.com/happyfish100/fastdfs/archive/V5.11.tar.gz</span><br><span class="line">tar xf V5.11.tar.gz</span><br><span class="line">cd fastdfs-5.11</span><br><span class="line"> ./make.sh &amp;&amp; ./make.sh install</span><br></pre></td></tr></table></figure></p>
+<p>3.配置跟踪服务器（tracker server）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1）拷贝tracker server和client端样例配置文件并重命名</span><br><span class="line">cp /etc/fdfs/tracker.conf.sample /etc/fdfs/tracker.conf</span><br><span class="line">cp /etc/fdfs/client.conf.sample /etc/fdfs/client.conf</span><br><span class="line">2）编辑tracker server配置文件tracker.conf，需要修改内容如下：</span><br><span class="line">disabled=false（默认为false，表示是否无效）</span><br><span class="line">port=22122（默认为22122）</span><br><span class="line">base_path=/home/fastdfs/tracker</span><br><span class="line">3）编辑client端的配置文件client.conf，需要修改内容如下</span><br><span class="line"> base_path=/home/fastdfs/tracker</span><br><span class="line"> tracker_server=192.168.1.147:22122</span><br><span class="line">4）创建tracker server数据目录</span><br><span class="line">mkdir -p /home/fastdfs/tracker</span><br><span class="line">5）测试启动tracker server，启动成功会自动在/home/fastdfs/tracker目录新建data和logs目录</span><br><span class="line">/etc/init.d/fdfs_trackerd start</span><br><span class="line">6）关闭tracker server</span><br></pre></td></tr></table></figure></p>
+<p>4、配置存储服务器（storage server）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">1）拷贝storage server样例配置文件并重命名</span><br><span class="line">cp /etc/fdfs/storage.conf.sample /etc/fdfs/storage.conf</span><br><span class="line">2）编辑storage server配置文件storage.conf，需要修改内容如下：</span><br><span class="line">disabled=false（默认为false，表示是否无效）</span><br><span class="line">port=23000（默认为23000）</span><br><span class="line">base_path=/home/fastdfs/storage</span><br><span class="line">tracker_server=192.168.1.147:22122</span><br><span class="line">store_path0=/home/fastdfs/storage</span><br><span class="line">http.server_port=8888（默认为8888，nginx中配置的监听端口那之一致）</span><br><span class="line">3）创建storage server数据目录</span><br><span class="line">mkdir -p /home/fastdfs/storage</span><br><span class="line">4）测试启动storage server，启动成功会自动在/data/fastdfs/tracker目录新建data和logs目录（启动storage server的前提是tracker server必须事先已启动）</span><br><span class="line">/etc/init.d/fdfs_storaged start</span><br></pre></td></tr></table></figure></p>
+<p>5、文件上传测试<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">执行如下上传命令： fdfs_upload_file /etc/fdfs/client.conf  login.jpg</span><br><span class="line">group1/M00/00/00/wKgBk1nd1ImAJ7MiAAJwztHvyoo346.jpg</span><br></pre></td></tr></table></figure></p>
+<p>5.存储服务器（storage server）安装并配置nginx<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">1).下载fastdfs-nginx-module模块	</span><br><span class="line">2）拷贝fastdfs-nginx-module模块中配置文件到/etc/fdfs目录中并编辑</span><br><span class="line">cp /root/fastdfs-nginx-module-master/src/mod_fastdfs.conf /etc/fdfs/</span><br><span class="line">vim /etc/fdfs/mod_fastdfs.conf</span><br><span class="line">修改内容如下：</span><br><span class="line">connect_timeout=10</span><br><span class="line">base_path=/tmp（默认为/tmp）</span><br><span class="line">tracker_server=192.168.1.147:22122</span><br><span class="line">storage_server_port=23000（默认配置为23000）</span><br><span class="line">url_have_group_name = true</span><br><span class="line">store_path0=/home/fastdfs/storage</span><br><span class="line">group_name=group1（默认配置为group1）</span><br><span class="line">3）安装nginx依赖库</span><br><span class="line">yum install -y pcre-devel zlib-devel  gd-devel</span><br><span class="line">4）下载并安装nginx</span><br><span class="line">wget https://nginx.org/download/nginx-1.12.1.tar.gz</span><br><span class="line">tar -zxf nginx-1.12.1.tar.gz</span><br><span class="line">cd nginx-1.12.1</span><br><span class="line">./configure --prefix=/application/nginx/ --add-module=../fastdfs-nginx-module-master/src/ --with-http_image_filter_module</span><br><span class="line">make &amp;&amp; make install</span><br><span class="line">5）拷贝FastDFS中的部分配置文件到/etc/fdfs目录中</span><br><span class="line">cp  /root/fastdfs-5.11/conf/http.conf  /etc/fdfs/</span><br><span class="line">cp  /root/fastdfs-5.11/conf/mime.types  /etc/fdfs/</span><br><span class="line">6）配置nginx，如下所示：vim /application/nginx/conf/nginx.conf</span><br><span class="line"> user  root;    </span><br><span class="line">        worker_processes  1;</span><br><span class="line"> events &#123;</span><br><span class="line">       worker_connections  1024;</span><br><span class="line"> &#125;</span><br><span class="line">   	http &#123;</span><br><span class="line">        include       mime.types;</span><br><span class="line">        default_type  application/octet-stream;</span><br><span class="line">        sendfile        on;</span><br><span class="line">        keepalive_timeout  65;</span><br><span class="line">        server &#123;</span><br><span class="line">            listen       8888;</span><br><span class="line">            server_name  localhost;</span><br><span class="line">            </span><br><span class="line">     location ~/group[0-9]/M[0-1][0-9]/.*,([0-9]+)x([0-9]+)\.(jpg|png|gif)$ &#123;</span><br><span class="line">            alias /home/fastdfs/storage/data;</span><br><span class="line">            ngx_fastdfs_module;</span><br><span class="line">            set $img_width2 $1;</span><br><span class="line">            set $img_height2 $2;</span><br><span class="line">            rewrite ^(.*),[0-9]+x[0-9]+\.(jpg|png|gif)$ $1.$2  break;</span><br><span class="line">            image_filter resize  $img_width2   $img_height2;</span><br><span class="line">     &#125;</span><br><span class="line">     location ~/group[0-9]/M[0-1][0-9]/(.*)&#123;</span><br><span class="line">            alias /home/fastdfs/storage/data;</span><br><span class="line">            ngx_fastdfs_module;</span><br><span class="line">     &#125;</span><br><span class="line">            error_page   500 502 503 504  /50x.html;</span><br><span class="line">            location = /50x.html &#123;</span><br><span class="line">            	root   html;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure></p>
+<p>7）拷贝nginx服务到/etc/init.d/目录下并启动</p>
+<pre><code>cp /application/nginx/sbin/nginx /etc/init.d/
+/etc/init.d/nginx
+</code></pre><p>8).通过浏览器访问</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/图片服务器Fastdfs配置nginx缩略图/" data-id="cjimid29y000cl4qfjf4nllqa" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Fastdfs/">Fastdfs</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CentOS7安装MySQL5-7" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/CentOS7安装MySQL5-7/" class="article-date">
+  <time datetime="2018-04-29T14:25:20.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/CentOS7安装MySQL5-7/">CentOS7安装MySQL5.7</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.添加 mysql yum Repository<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget https:<span class="comment">//dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm</span></span><br><span class="line">yum localinstall mysql57-community-release-el7-<span class="number">11</span>.noarch.rpm</span><br></pre></td></tr></table></figure></p>
+<ol start="2">
+<li><p>安装mysql-server:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install mysql-community-server</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>mysql服务 </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a).启动mysql服务:service mysqld start </span><br><span class="line">b).查看mysql服务状态:service mysqld status</span><br><span class="line">c).重启mysql服务: service mysqld restart</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>4.修改初始密码<br>a).初始密码在 /var/log/mysqld.log 文件中<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep <span class="string">'temporary password'</span> /var/log/mysqld.log</span><br></pre></td></tr></table></figure></p>
+<p>5.修改 root 密码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a ). mysql -u root -p </span><br><span class="line">b ). ALTER USER <span class="string">'root'</span>@<span class="string">'localhost'</span> IDENTIFIED BY <span class="string">'1qaz@WSX3edc'</span>;  </span><br><span class="line">c ). FLUSH PRIVILEGES;</span><br><span class="line">d). exit;</span><br></pre></td></tr></table></figure></p>
+<p>6.重启mysql<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysqld restart</span><br></pre></td></tr></table></figure></p>
+<p>7.设置 mysql 远程访问<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a). vim /etc/my.cnf 增加内容：bind-address = <span class="number">0.0</span>.0.0</span><br><span class="line">b). 增加慢查询</span><br><span class="line">slow-query-log = <span class="number">1</span></span><br><span class="line">slow-query-log-file=/var/lib/mysql/mysql_slow.log</span><br><span class="line">long_query_time=<span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p>8.登录 mysql -u root -p<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; use mysql;</span><br><span class="line">mysql&gt; select user,host from user;</span><br><span class="line">将root用户host更新成 %:</span><br><span class="line">mysql&gt;  update user set host = <span class="string">'%'</span> where user = <span class="string">'root'</span>;</span><br></pre></td></tr></table></figure></p>
+<p>9.重启mysql<br>10.查看慢查询参数<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; show variables like <span class="string">'%query%'</span>;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/CentOS7安装MySQL5-7/" data-id="cjimid29u0007l4qf73ske12k" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CenOS7部署Gitblit-push触发HOOK" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/CenOS7部署Gitblit-push触发HOOK/" class="article-date">
+  <time datetime="2018-04-29T13:56:42.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/CenOS7部署Gitblit-push触发HOOK/">CenOS7部署Gitblit,push触发HOOK</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.首先到<a href="http://gitblit.com/" target="_blank" rel="noopener">http://gitblit.com/</a> 下载gitblit文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt;cd /usr/local/src</span><br><span class="line">&gt;wget http://dl.bintray.com/gitblit/releases/gitblit-1.8.0.tar.gz</span><br><span class="line">&gt;tar -zxf gitblit-1.8.0.tar.gz gitblit-1.8.0</span><br><span class="line">&gt; mv gitblit-1.8.0 gitblit</span><br></pre></td></tr></table></figure></p>
+<p>2.由于gitblit是使用Groovy语言开发的，所以需要JAVA_HOME，需要先提前配置好JAVA_HOME环境变量<br>3.配置gitblit git仓库，跟web端口号<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;cd data</span><br><span class="line">&gt;vim defaults.properties</span><br></pre></td></tr></table></figure></p>
+<p>4.找到server.httpPort ,git.repositoriesFolder,修改成对应的地址<br>5.执行gitblit方法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;cd gitblit </span><br><span class="line">&gt;./gitblit.sh</span><br></pre></td></tr></table></figure></p>
+<p>6.gitblit默认账号密码是admin，创建版本库。<br>7.编辑hook触发脚本文件,编辑内容<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt;cd groovy</span><br><span class="line">&gt;vim auto.groovy</span><br></pre></td></tr></table></figure></p>
+<p>#内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br></pre></td><td class="code"><pre><span class="line">import com.gitblit.GitBlit</span><br><span class="line">import com.gitblit.Keys</span><br><span class="line">import com.gitblit.models.RepositoryModel</span><br><span class="line">import com.gitblit.models.TeamModel</span><br><span class="line">import com.gitblit.models.UserModel</span><br><span class="line">import com.gitblit.utils.JGitUtils</span><br><span class="line">import com.gitblit.utils.StringUtils</span><br><span class="line">import java.text.SimpleDateFormat</span><br><span class="line">import org.eclipse.jgit.api.CloneCommand</span><br><span class="line">import org.eclipse.jgit.api.Git</span><br><span class="line">import org.eclipse.jgit.lib.Repository</span><br><span class="line">import org.eclipse.jgit.lib.Config</span><br><span class="line">import org.eclipse.jgit.revwalk.RevCommit</span><br><span class="line">import org.eclipse.jgit.transport.ReceiveCommand</span><br><span class="line">import org.eclipse.jgit.transport.ReceiveCommand.Result</span><br><span class="line">import org.eclipse.jgit.util.FileUtils</span><br><span class="line">import org.slf4j.Logger</span><br><span class="line">import org.eclipse.jgit.api.ResetCommand.ResetType</span><br><span class="line">import org.eclipse.jgit.api.ResetCommand</span><br><span class="line"></span><br><span class="line">logger.info(&quot;localclone hook triggered by $&#123;user.username&#125; for $&#123;repository.name&#125;&quot;)</span><br><span class="line"></span><br><span class="line">def rootFolder = &apos;/usr/local/nginx/html&apos;</span><br><span class="line">def bare = false</span><br><span class="line">def cloneAllBranches = true</span><br><span class="line">def cloneBranch = &apos;refs/heads/master&apos;</span><br><span class="line">def includeSubmodules = true</span><br><span class="line"></span><br><span class="line">def repoName = repository.name</span><br><span class="line">def destinationFolder = new File(rootFolder, StringUtils.stripDotGit(repoName))</span><br><span class="line">def srcUrl = &apos;file://&apos; + new File(gitblit.getRepositoriesFolder(), repoName).absolutePath</span><br><span class="line"></span><br><span class="line">// delete any previous clone</span><br><span class="line">if (destinationFolder.exists()) &#123;</span><br><span class="line">	Git git = Git.open(destinationFolder)</span><br><span class="line">    git.fetch().call()</span><br><span class="line">    logger.info(&quot;执行git fetch&quot;)</span><br><span class="line">    ResetCommand resetCmd = git.reset()</span><br><span class="line">    resetCmd.setMode(ResetType.HARD)</span><br><span class="line">    resetCmd.setRef(&quot;FETCH_HEAD&quot;) </span><br><span class="line">    resetCmd.call()</span><br><span class="line">	logger.info(&quot;执行git reset&quot;)</span><br><span class="line">	git.pull().call()</span><br><span class="line">	logger.info(&quot;执行git pull强制同步服务器结束！&quot;)</span><br><span class="line">	//FileUtils.delete(destinationFolder, FileUtils.RECURSIVE)</span><br><span class="line">&#125;else&#123;</span><br><span class="line">	// clone the repository</span><br><span class="line">	logger.info(&quot;cloning $&#123;srcUrl&#125; to $&#123;destinationFolder&#125;&quot;)</span><br><span class="line">	CloneCommand cmd = Git.cloneRepository();</span><br><span class="line">	cmd.setBare(bare)</span><br><span class="line">	if (cloneAllBranches)</span><br><span class="line">		cmd.setCloneAllBranches(true)</span><br><span class="line">	else</span><br><span class="line">		cmd.setBranch(cloneBranch)</span><br><span class="line">	cmd.setCloneSubmodules(includeSubmodules)</span><br><span class="line">	cmd.setURI(srcUrl)</span><br><span class="line">	cmd.setDirectory(destinationFolder)</span><br><span class="line">	Git git = cmd.call();</span><br><span class="line">	git.repository.close()</span><br><span class="line">	// report clone operation success back to pushing Git client</span><br><span class="line">	clientLogger.info(&quot;$&#123;repoName&#125; cloned to $&#123;destinationFolder&#125;&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>8.编辑版本库，配置我们刚才编写的groovy文件<br><img src="/images/clipboard.png" alt=""><br>9.配置SSH ，避免需要输入密码</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/CenOS7部署Gitblit-push触发HOOK/" data-id="cjimid29i0000l4qfjgjk3gq5" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Gitblit/">Gitblit</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-spring-boot集成kafka发送消息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/spring-boot集成kafka发送消息/" class="article-date">
+  <time datetime="2018-04-29T13:52:26.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/spring-boot集成kafka发送消息/">spring-boot集成kafka发送消息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.引入spring-kafka.jar文件<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.kafka&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-kafka&lt;/artifactId&gt;</span><br><span class="line">    &lt;version&gt;2.0.0.RELEASE&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure></p>
+<p>2.在application.yml里面加入kafka配置<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">spring:</span><br><span class="line">    kafka:</span><br><span class="line">        bootstrap-servers: 192.168.1.90:9092</span><br></pre></td></tr></table></figure></p>
+<p>3.引入KafkaTemplate ，发送消息使用kafkaTemplate.send(“test”, “bootcwnao”, JSON.toJSONString(data));</p>
+<p>备注：<br>1.启动脚本<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">nohup bin/zookeeper-server-start.sh config/zookeeper.properties &gt; zookeeper.log 2&gt;&amp;1 &amp;</span><br><span class="line">nohup bin/kafka-server-start.sh config/server.properties &gt; kafka.log 2&gt;&amp;1 &amp;</span><br></pre></td></tr></table></figure></p>
+<p>2.注意kafka是否开放了host,port端口<br>修改server.properties<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">advertised.listeners=PLAINTEXT://192.168.1.90:9092</span><br></pre></td></tr></table></figure></p>
+<p>2.查看消息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/kafka-console-consumer.sh --bootstrap-server 192.168.1.90:9092 --topic test  --from-beginning</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/spring-boot集成kafka发送消息/" data-id="cjimid29x000al4qfl9zwxvp2" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/kafka/">kafka</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-IOS-JAVA后端配置RSA加密传输" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/IOS-JAVA后端配置RSA加密传输/" class="article-date">
+  <time datetime="2018-04-29T10:38:30.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/IOS-JAVA后端配置RSA加密传输/">IOS,JAVA后端配置RSA加密传输</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.采用openssl生成rsa公钥秘钥，内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">openssl genrsa -out private_key.pem <span class="number">1024</span></span><br><span class="line">openssl rsa -in private_key.pem -out rsa_public_key.pem -pubout　　　　　　　　　　　　　</span><br><span class="line"><span class="comment">// Create rsa_public_key.pem For Java</span></span><br><span class="line">openssl pkcs8 -topk8 -in private_key.pem -out pkcs8_private_key.pem -nocrypt　　　　　</span><br><span class="line"><span class="comment">// Create pkcs8_private_key.pem For Java</span></span><br></pre></td></tr></table></figure></p>
+<p>2.Java后端代码<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.zsjyt.common.util;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.springframework.core.io.ClassPathResource;</span><br><span class="line"><span class="keyword">import</span> org.springframework.core.io.Resource;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> javax.crypto.BadPaddingException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.Cipher;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.IllegalBlockSizeException;</span><br><span class="line"><span class="keyword">import</span> javax.crypto.NoSuchPaddingException;</span><br><span class="line"><span class="keyword">import</span> java.io.BufferedReader;</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStreamReader;</span><br><span class="line"><span class="keyword">import</span> java.security.*;</span><br><span class="line"><span class="keyword">import</span> java.security.interfaces.RSAPrivateKey;</span><br><span class="line"><span class="keyword">import</span> java.security.interfaces.RSAPublicKey;</span><br><span class="line"><span class="keyword">import</span> java.security.spec.InvalidKeySpecException;</span><br><span class="line"><span class="keyword">import</span> java.security.spec.PKCS8EncodedKeySpec;</span><br><span class="line"><span class="keyword">import</span> java.security.spec.X509EncodedKeySpec;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">EncrypRSAUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/** 指定公钥存放文件 */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String PUBLIC_KEY_FILE = <span class="string">"rsa_public_key.pem"</span>;</span><br><span class="line">    <span class="comment">/** 指定私钥存放文件 */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> String PRIVATE_KEY_FILE = <span class="string">"pkcs8_private_key.pem"</span>;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 私钥</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> RSAPrivateKey privateKey;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 公钥</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> RSAPublicKey publicKey;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 获取私钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 当前的私钥对象</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> RSAPrivateKey <span class="title">getPrivateKey</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> privateKey;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从字符串中加载公钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> publicKeyStr 公钥数据字符串</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception 加载公钥时产生的异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadPublicKey</span><span class="params">(String publicKeyStr)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sun.misc.BASE64Decoder decoder = <span class="keyword">new</span> sun.misc.BASE64Decoder();</span><br><span class="line">            <span class="keyword">byte</span>[] buffer= decoder.decodeBuffer(publicKeyStr);</span><br><span class="line">            KeyFactory keyFactory= KeyFactory.getInstance(<span class="string">"RSA"</span>);</span><br><span class="line">            X509EncodedKeySpec keySpec= <span class="keyword">new</span> X509EncodedKeySpec(buffer);</span><br><span class="line">            publicKey= (RSAPublicKey) keyFactory.generatePublic(keySpec);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"无此算法"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvalidKeySpecException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"公钥非法"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"公钥数据为空"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从文件中输入流中加载公钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> in 公钥输入流</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception 加载公钥时产生的异常</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadPublicKey</span><span class="params">(InputStream in)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            BufferedReader br= <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(in));</span><br><span class="line">            String readLine= <span class="keyword">null</span>;</span><br><span class="line">            StringBuilder sb= <span class="keyword">new</span> StringBuilder();</span><br><span class="line">            <span class="keyword">while</span>((readLine= br.readLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(readLine.charAt(<span class="number">0</span>)==<span class="string">'-'</span>)&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    sb.append(readLine);</span><br><span class="line">                    sb.append(<span class="string">'\r'</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            loadPublicKey(sb.toString());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"公钥数据流读取错误"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"公钥输入流为空"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 从文件中加载私钥</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> in 私钥文件名</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span> 是否成功</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadPrivateKey</span><span class="params">(InputStream in)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            BufferedReader br= <span class="keyword">new</span> BufferedReader(<span class="keyword">new</span> InputStreamReader(in));</span><br><span class="line">            String readLine= <span class="keyword">null</span>;</span><br><span class="line">            StringBuilder sb= <span class="keyword">new</span> StringBuilder();</span><br><span class="line">            <span class="keyword">while</span>((readLine= br.readLine())!=<span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">if</span>(readLine.charAt(<span class="number">0</span>)==<span class="string">'-'</span>)&#123;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    sb.append(readLine);</span><br><span class="line">                    sb.append(<span class="string">'\r'</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            loadPrivateKey(sb.toString());</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"私钥数据读取错误"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"私钥输入流为空"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">loadPrivateKey</span><span class="params">(String privateKeyStr)</span> <span class="keyword">throws</span> Exception</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            sun.misc.BASE64Decoder decoder = <span class="keyword">new</span> sun.misc.BASE64Decoder();</span><br><span class="line">            <span class="keyword">byte</span>[] buffer= decoder.decodeBuffer(privateKeyStr);</span><br><span class="line">            PKCS8EncodedKeySpec keySpec= <span class="keyword">new</span> PKCS8EncodedKeySpec(buffer);</span><br><span class="line">            KeyFactory keyFactory= KeyFactory.getInstance(<span class="string">"RSA"</span>);</span><br><span class="line">            privateKey= (RSAPrivateKey) keyFactory.generatePrivate(keySpec);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NoSuchAlgorithmException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"无此算法"</span>);</span><br><span class="line">        &#125; <span class="keyword">catch</span> (InvalidKeySpecException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"私钥非法"</span>);</span><br><span class="line">        &#125;  <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"私钥数据为空"</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 加密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcBytes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NoSuchAlgorithmException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NoSuchPaddingException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> InvalidKeyException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalBlockSizeException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> BadPaddingException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] encrypt(<span class="keyword">byte</span>[] srcBytes) &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Resource resource = <span class="keyword">new</span> ClassPathResource(PUBLIC_KEY_FILE);</span><br><span class="line">            loadPublicKey(resource.getInputStream());</span><br><span class="line">            <span class="keyword">if</span>(publicKey== <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"加密公钥为空, 请设置"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Cipher cipher= <span class="keyword">null</span>;</span><br><span class="line">            cipher= Cipher.getInstance(<span class="string">"RSA"</span>);</span><br><span class="line">            cipher.init(Cipher.ENCRYPT_MODE, publicKey);</span><br><span class="line">            <span class="keyword">byte</span>[] output= cipher.doFinal(srcBytes);</span><br><span class="line">            <span class="keyword">return</span> output;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span>  <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 解密</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> srcBytes</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NoSuchAlgorithmException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> NoSuchPaddingException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> InvalidKeyException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> IllegalBlockSizeException</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> BadPaddingException</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">byte</span>[] decrypt( <span class="keyword">byte</span>[] srcBytes)  &#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            Resource resource = <span class="keyword">new</span> ClassPathResource(PRIVATE_KEY_FILE);</span><br><span class="line">            loadPrivateKey(resource.getInputStream());</span><br><span class="line">            <span class="keyword">if</span> (privateKey== <span class="keyword">null</span>)&#123;</span><br><span class="line">                <span class="keyword">throw</span> <span class="keyword">new</span> Exception(<span class="string">"解密私钥为空, 请设置"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            Cipher cipher= <span class="keyword">null</span>;</span><br><span class="line">            cipher= Cipher.getInstance(<span class="string">"RSA"</span>);</span><br><span class="line">            cipher.init(Cipher.DECRYPT_MODE, privateKey);</span><br><span class="line">            <span class="keyword">byte</span>[] output= cipher.doFinal(srcBytes);</span><br><span class="line">            <span class="keyword">return</span> output;</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//byte[] asas = encrypt("asdasdasd".getBytes());</span></span><br><span class="line">        sun.misc.BASE64Decoder decoder = <span class="keyword">new</span> sun.misc.BASE64Decoder();</span><br><span class="line">        <span class="keyword">byte</span>[] sss = decoder.decodeBuffer(<span class="string">"ykB6qWeWdVuDTzmLaeQBuli20Lhe/M8rCC1PsLTdxXt2rUBnt7qZAmnOMMoIzKFpEsxsZ9j9+nwLyZ7+TwEjuC9tyJ7IJm9Pk/LrEk93+sGAquXHk/+qmaNMXZXNxj6Ebog+wNNXMAyTUYhq7KBQsS9myi3ehbkOc7BqkyN7soo="</span>);</span><br><span class="line">        System.out.println(<span class="keyword">new</span> String(decrypt(sss)));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/IOS-JAVA后端配置RSA加密传输/" data-id="cjimid29r0004l4qf3h2f2abx" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/RSA加密/">RSA加密</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CentOS7安装JDK" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/CentOS7安装JDK/" class="article-date">
+  <time datetime="2018-04-29T10:35:52.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/CentOS7安装JDK/">CentOS7安装JDK</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.更新系统软件 yum update<br>2.cd /usr/local/src<br>3.从Oracle官网下载 JDK<br>4.解压 tar -zxf jdk.tar.gz<br>5.添加到环境变量，内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#jdk</span><br><span class="line">export JAVA_HOME=/usr/local/src/jdk1.8.0_144</span><br><span class="line">export PATH=$JAVA_HOME/bin:$PATH</span><br><span class="line">export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar</span><br></pre></td></tr></table></figure></p>
+<p>然后执行 source /etc/profile<br>6.验证 java -version</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/CentOS7安装JDK/" data-id="cjimid29q0003l4qfpkn9cigl" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-CentOS7配置Redis开启启动" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/04/29/CentOS7配置Redis开启启动/" class="article-date">
+  <time datetime="2018-04-29T10:28:31.000Z" itemprop="datePublished">2018-04-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/29/CentOS7配置Redis开启启动/">CentOS7配置Redis开启启动</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.cd /usr/local/src<br>2.wget <a href="http://download.redis.io/releases/redis-4.0.2.tar.gz" target="_blank" rel="noopener">http://download.redis.io/releases/redis-4.0.2.tar.gz</a><br>3.tar xzf redis-4.0.2.tar.gz<br>4.cd redis-4.0.2<br>5.make<br>6.vim redis.conf,内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#bind 127.0.0.1</span><br><span class="line">daemonize yes</span><br></pre></td></tr></table></figure></p>
+<p>7.vim /etc/init.d/redis,内容如下:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">#!/bin/sh</span><br><span class="line">#Simple Redis init.d script conceived to work on Linux systems</span><br><span class="line">#as it does use of the /proc filesystem.</span><br><span class="line">#chkconfig: 2345 80 90</span><br><span class="line">#description:auto_run</span><br><span class="line">REDISPORT=<span class="number">6379</span></span><br><span class="line">EXEC=/usr/local/src/redis-<span class="number">4.0</span>.1/src/redis-server</span><br><span class="line">CLIEXEC=/usr/local/src/redis-<span class="number">4.0</span>.1/src/redis-cli</span><br><span class="line"></span><br><span class="line">PIDFILE=/var/run/redis_6379.pid</span><br><span class="line">CONF=<span class="string">"/usr/local/src/redis-4.0.1/redis.conf"</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">case</span> <span class="string">"$1"</span> in</span><br><span class="line">    start)</span><br><span class="line">        <span class="keyword">if</span> [ -f $PIDFILE ]</span><br><span class="line">        then</span><br><span class="line">                echo <span class="string">"$PIDFILE exists, process is already running or crashed"</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                echo <span class="string">"Starting Redis server..."</span></span><br><span class="line">                $EXEC $CONF</span><br><span class="line">        fi</span><br><span class="line">        ;;</span><br><span class="line">    stop)</span><br><span class="line">        <span class="keyword">if</span> [ ! -f $PIDFILE ]</span><br><span class="line">        then</span><br><span class="line">                echo <span class="string">"$PIDFILE does not exist, process is not running"</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">                PID=$(cat $PIDFILE)</span><br><span class="line">                echo <span class="string">"Stopping ..."</span></span><br><span class="line">                $CLIEXEC -p $REDISPORT shutdown</span><br><span class="line">                <span class="keyword">while</span> [ -x /proc/$&#123;PID&#125; ]</span><br><span class="line">                <span class="keyword">do</span></span><br><span class="line">                    echo <span class="string">"Waiting for Redis to shutdown ..."</span></span><br><span class="line">                    sleep <span class="number">1</span></span><br><span class="line">                done</span><br><span class="line">                echo <span class="string">"Redis stopped"</span></span><br><span class="line">        fi</span><br><span class="line">        ;;</span><br><span class="line">    *)</span><br><span class="line">        echo <span class="string">"Please use start or stop as first argument"</span></span><br><span class="line">        ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure></p>
+<p>8.修改文件执行权限 chmod +x /etc/init.d/redis<br>9.设置开机启动 </p>
+<h1 id="尝试启动或停止-redis"><a href="#尝试启动或停止-redis" class="headerlink" title="尝试启动或停止 redis"></a>尝试启动或停止 redis</h1><p>service redis start<br>service redis stop</p>
+<h1 id="开启服务自启动"><a href="#开启服务自启动" class="headerlink" title="开启服务自启动"></a>开启服务自启动</h1><p>chkconfig redis on</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/04/29/CentOS7配置Redis开启启动/" data-id="cjimid29s0005l4qf5voxf4mv" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Redis/">Redis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell/">Shell</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fastdfs/">Fastdfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitblit/">Gitblit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSA加密/">RSA加密</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kafka/">kafka</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Fastdfs/" style="font-size: 10px;">Fastdfs</a> <a href="/tags/Gitblit/" style="font-size: 10px;">Gitblit</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 10px;">MySQL</a> <a href="/tags/RSA加密/" style="font-size: 10px;">RSA加密</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Shell/" style="font-size: 15px;">Shell</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/04/29/Linux各种命令/">Linux各种命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/">CentOS7使用mailx发送邮件(通过postfix与mailx)</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/图片服务器Fastdfs配置nginx缩略图/">图片服务器Fastdfs配置nginx缩略图</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/CentOS7安装MySQL5-7/">CentOS7安装MySQL5.7</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/CenOS7部署Gitblit-push触发HOOK/">CenOS7部署Gitblit,push触发HOOK</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 刘顺秋<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
