@@ -5,22 +5,15 @@
   
 
   
-  <title>CentOS7使用mailx发送邮件(通过postfix与mailx) | 路一直都在丶</title>
+  <title>归档: 2018 | 路一直都在丶</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.先卸载掉sendmail1yum remove -y sendmail 2.安装postdix1yum install -y postfix mailx cyrus-sasl-plain 3.这里我们使用163邮箱来发送邮件，首先到163邮箱官网里面设置smtp还有获取授权码4.编辑vim /etc/mail.rc,编辑内容如下：1234567set from=（发送人）set smtp=(发">
-<meta name="keywords" content="Linux,Shell">
-<meta property="og:type" content="article">
-<meta property="og:title" content="CentOS7使用mailx发送邮件(通过postfix与mailx)">
-<meta property="og:url" content="http://yoursite.com/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="路一直都在丶">
+<meta property="og:url" content="http://yoursite.com/archives/2018/page/2/index.html">
 <meta property="og:site_name" content="路一直都在丶">
-<meta property="og:description" content="1.先卸载掉sendmail1yum remove -y sendmail 2.安装postdix1yum install -y postfix mailx cyrus-sasl-plain 3.这里我们使用163邮箱来发送邮件，首先到163邮箱官网里面设置smtp还有获取授权码4.编辑vim /etc/mail.rc,编辑内容如下：1234567set from=（发送人）set smtp=(发">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://yoursite.com/images/mailxsend.png">
-<meta property="og:updated_time" content="2018-06-20T02:24:38.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS7使用mailx发送邮件(通过postfix与mailx)">
-<meta name="twitter:description" content="1.先卸载掉sendmail1yum remove -y sendmail 2.安装postdix1yum install -y postfix mailx cyrus-sasl-plain 3.这里我们使用163邮箱来发送邮件，首先到163邮箱官网里面设置smtp还有获取授权码4.编辑vim /etc/mail.rc,编辑内容如下：1234567set from=（发送人）set smtp=(发">
-<meta name="twitter:image" content="http://yoursite.com/images/mailxsend.png">
+<meta name="twitter:title" content="路一直都在丶">
   
     <link rel="alternate" href="/atom.xml" title="路一直都在丶" type="application/atom+xml">
   
@@ -67,66 +60,45 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-CentOS7使用mailx发送邮件-通过postfix与mailx" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/" class="article-date">
-  <time datetime="2018-04-29T14:55:08.000Z" itemprop="datePublished">2018-04-29</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
+        <section id="main">
   
-    <h1 class="article-title" itemprop="name">
-      CentOS7使用mailx发送邮件(通过postfix与mailx)
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2018/04/29/CentOS7配置Redis开启启动/" class="archive-article-date">
+  <time datetime="2018-04-29T10:28:31.000Z" itemprop="datePublished">4月 29</time>
+</a>
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2018/04/29/CentOS7配置Redis开启启动/">CentOS7配置Redis开启启动</a>
     </h1>
   
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.先卸载掉sendmail<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum remove -y sendmail</span><br></pre></td></tr></table></figure></p>
-<p>2.安装postdix<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install -y postfix mailx cyrus-sasl-plain</span><br></pre></td></tr></table></figure></p>
-<p>3.这里我们使用163邮箱来发送邮件，首先到163邮箱官网里面设置smtp还有获取授权码<br><img src="/images/mailxsend.png" alt=""><br>4.编辑vim /etc/mail.rc,编辑内容如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">set from=（发送人）</span><br><span class="line">set smtp=(发送邮件的stmp)smtps://smtp.163.com:994</span><br><span class="line">set smtp-auth=login</span><br><span class="line">set smtp-auth-user=(用户名)</span><br><span class="line">set smtp-auth-password=(授权码)</span><br><span class="line">set ssl-verify=ignore</span><br><span class="line">set nss-config-dir=/etc/pki/nssdb</span><br></pre></td></tr></table></figure></p>
-<p>5.测试发送<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo “内容” | mailx -v -s &quot; 标题&quot; 收件人邮箱</span><br></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/04/29/CentOS7使用mailx发送邮件-通过postfix与mailx/" data-id="cjjb3r7500000d4qfhh6f8qn2" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Shell/">Shell</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2018/04/29/Linux各种命令/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Linux各种命令
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2018/04/29/图片服务器Fastdfs配置nginx缩略图/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">图片服务器Fastdfs配置nginx缩略图</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/archives/2018/">&laquo; 上一页</a><a class="page-number" href="/archives/2018/">1</a><span class="page-number current">2</span>
+  </nav>
 
 </section>
         
