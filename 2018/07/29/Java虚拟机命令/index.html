@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Java虚拟机命令 | 路一直都在丶</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="jps：虚拟机进程状况工具 1234567a). -l 输出主类的全名,如果进程执行的是Jar包,输出Jar路径b). -m 输出虚拟机进程启动时传递给主类main()函数的参数c). -v 输出虚拟机进程启动时传入JVM参数eg: jps -lvm --------------------------24131 sun.tools.jps.Jps -lmv -Dapplication.home">
+<meta name="keywords" content="Java虚拟机">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java虚拟机命令">
+<meta property="og:url" content="http://yoursite.com/2018/07/29/Java虚拟机命令/index.html">
+<meta property="og:site_name" content="路一直都在丶">
+<meta property="og:description" content="jps：虚拟机进程状况工具 1234567a). -l 输出主类的全名,如果进程执行的是Jar包,输出Jar路径b). -m 输出虚拟机进程启动时传递给主类main()函数的参数c). -v 输出虚拟机进程启动时传入JVM参数eg: jps -lvm --------------------------24131 sun.tools.jps.Jps -lmv -Dapplication.home">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-09T07:55:07.273Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java虚拟机命令">
+<meta name="twitter:description" content="jps：虚拟机进程状况工具 1234567a). -l 输出主类的全名,如果进程执行的是Jar包,输出Jar路径b). -m 输出虚拟机进程启动时传递给主类main()函数的参数c). -v 输出虚拟机进程启动时传入JVM参数eg: jps -lvm --------------------------24131 sun.tools.jps.Jps -lmv -Dapplication.home">
+  
+    <link rel="alternate" href="/atom.xml" title="路一直都在丶" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">路一直都在丶</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">首页</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-Java虚拟机命令" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/07/29/Java虚拟机命令/" class="article-date">
+  <time datetime="2018-07-29T05:25:23.000Z" itemprop="datePublished">2018-07-29</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Java虚拟机命令
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p><code>jps：虚拟机进程状况工具</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a). -l 输出主类的全名,如果进程执行的是Jar包,输出Jar路径</span><br><span class="line">b). -m 输出虚拟机进程启动时传递给主类main()函数的参数</span><br><span class="line">c). -v 输出虚拟机进程启动时传入JVM参数</span><br><span class="line">eg: jps -lvm </span><br><span class="line">--------------------------</span><br><span class="line"><span class="number">24131</span> sun.tools.jps.Jps -lmv -Dapplication.home=/usr/java/jdk1.8.0_101 -Xms8m</span><br><span class="line"><span class="number">1541</span> /data/webdata/apps<span class="comment">//search.jar -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=9960,suspend=n -Xms128M -Xmx256M -Dspring.profiles.active=dev</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>jstat：虚拟机统计信息监视工具</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">a). -<span class="class"><span class="keyword">class</span> 监视类装载、卸载数量、总空间以及类装在所消耗的时间</span></span><br><span class="line">eg: jstat -class 19830</span><br><span class="line">Loaded(加载<span class="class"><span class="keyword">class</span>的数量)       <span class="title">Bytes</span>(所占用空间大小)      <span class="title">Unloaded</span>(未加载数量)  <span class="title">Bytes</span>(未加载占用空间)   <span class="title">Time</span>(时间) </span></span><br><span class="line"><span class="class">          8594                      15920.9                   0                      0.0             11.40</span></span><br><span class="line"><span class="class">------------------------------------------------------------------------------------------------------------------------</span></span><br><span class="line"><span class="class"><span class="title">b</span>). -<span class="title">gc</span> 监视<span class="title">Java</span>堆状态,包括<span class="title">Eden</span>区、两个<span class="title">survivor</span>区、老年代、永久代等的容量、已用空间、<span class="title">GC</span>时间合计等信息</span></span><br><span class="line">eg: jstat -gc 19830</span><br><span class="line">S0C(第一个幸存区的大小)    S1C(第二个幸存区的大小)    S0U(第一个幸存区的使用大小)    S1U(第二个幸存区的使用大小)      EC(伊甸园区的大小)       EU(伊甸园区的使用大小)        OC(老年代大小)         OU(老年代使用大小)       MC(方法区大小)     MU(方法区使用大小)    CCSC(压缩类空间大小)   CCSU(压缩类空间使用大小)   YGC(年轻代垃圾回收次数)     YGCT(年轻代垃圾回收消耗时间)    FGC(老年代垃圾回收次数)    FGCT(老年代垃圾回收消耗时间)     GCT(垃圾回收消耗总时间)   </span><br><span class="line">        <span class="number">8192.0</span>             	<span class="number">1536.0</span>      		  <span class="number">0.0</span>  			 <span class="number">1184.2</span> 		  <span class="number">122880.0</span>		   <span class="number">48794.8</span>   		    <span class="number">175104.0</span>  		 <span class="number">28093.7</span>   	       <span class="number">47656.0</span> 		  <span class="number">46746.4</span> 		<span class="number">5928.0</span> 		   <span class="number">5718.4</span>     		   <span class="number">27</span>    			<span class="number">0.383</span>  			 <span class="number">2</span>     		 	<span class="number">0.299</span>    			<span class="number">0.682</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">c). -gccapacity 监视内容与-gc基本相同,但输出主要关注Java堆各个区域使用到的最大、最小空间</span><br><span class="line">eg: jstat -gccapacity <span class="number">19830</span></span><br><span class="line"> NGCMN(新生代最小容量)    NGCMX(新生代最大容量)     NGC(当前新生代容量)     S0C(第一个幸存区的大小)   S1C(第二个幸存区的大小)       EC(伊甸园区的大小)       OGCMN(老年代最小容量)      OGCMX(老年代最大容量)       OGC(老年代容量当前新生成的容量)         OC(老年代大小)       MCMN(方法区最小容量)     MCMX(方法区最大容量)      MC(方法区大小)     CCSMN(最小压缩类空间大小)    CCSMX(最大压缩类空间大小)     CCSC(压缩类空间大小)    YGC(年轻代垃圾回收次数)    FGC(老年代垃圾回收次数) </span><br><span class="line"> 	<span class="number">87040.0</span> 		<span class="number">174592.0</span> 		<span class="number">139264.0</span> 		<span class="number">8192.0</span> 		<span class="number">1536.0</span> 			<span class="number">122880.0</span>   		<span class="number">175104.0</span> 		  <span class="number">349696.0</span>  			 <span class="number">175104.0</span>  		 	<span class="number">175104.0</span>     		 <span class="number">0.0</span> 		<span class="number">1091584.0</span> 		 <span class="number">47656.0</span>     		 <span class="number">0.0</span> 		<span class="number">1048576.0</span>  			 <span class="number">5928.0</span>    		 <span class="number">27</span>   		  <span class="number">2</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">d). -gcutil 监视内容与-gc基本相同,但输出主要关注已使用空间占总空间的百分比</span><br><span class="line">eg: jstat -gcutil <span class="number">19830</span></span><br><span class="line">  S0(第一个幸存区当前使用比例)     S1(第二个幸存区当前使用比例)     E(伊甸园区使用比例)      O(老年代区使用比例)      M(方法区使用比例)     CCS(压缩使用比例)    YGC(年轻代垃圾回收次数)     YGCT(年轻代垃圾回收消耗时间)    FGC(老年代垃圾回收次数)    FGCT(老年代垃圾回收消耗时间)     GCT(垃圾回收消耗总时间)   </span><br><span class="line">  	<span class="number">0.00</span> 		 	   <span class="number">77.09</span>  			<span class="number">51.17</span> 		 	<span class="number">16.04</span>  			<span class="number">98.09</span> 		 <span class="number">96.46</span>  		   <span class="number">27</span>   		 <span class="number">0.383</span>    		 <span class="number">2</span>  		  		<span class="number">0.299</span> 		  	 <span class="number">0.682</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">e). -gccause 与 -gcutil 功能一样,但是会额外输出导致上一次GC产生的原因</span><br><span class="line">eg: jstat -gccause <span class="number">19830</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">f). -gcnew 监视新生代GC状况</span><br><span class="line">eg: jstat -gcnew <span class="number">19830</span></span><br><span class="line"> S0C(第一个幸存区的大小)    S1C(第二个幸存区的大小)    S0U(第一个幸存区的使用大小)    S1U(第二个幸存区的使用大小)   TT(对象在新生代存活的次数) MTT(对象在新生代存活的最大次数)  DSS(期望的幸存区大小)      EC(伊甸园区的大小)       EU(伊甸园区的使用大小)     YGC(年轻代垃圾回收次数)     YGCT(年轻代垃圾回收消耗时间)  </span><br><span class="line">	<span class="number">8192.0</span> 			<span class="number">1536.0</span>    			<span class="number">0.0</span> 			<span class="number">1184.2</span> 			<span class="number">13</span>  			<span class="number">15</span> 			<span class="number">8192.0</span> 				<span class="number">122880.0</span> 		 <span class="number">67585.5</span> 		    <span class="number">27</span>   		 <span class="number">0.383</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">g). -gcnewcapacity 监视内容与 -gcnew 基本相同,输出主要关注使用到的最大、最小空间</span><br><span class="line">eg: jstat -gcnewcapacity <span class="number">19830</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">h). -gcold 监视老年代GC情况</span><br><span class="line">eg: jstat -gcold <span class="number">19830</span></span><br><span class="line">   MC(方法区大小)      MU(方法区使用大小)      CCSC(压缩类空间大小)     CCSU(压缩类空间使用大小)       OC(老年代大小)          OU(老年代使用大小)       YGC(年轻代垃圾回收次数)    FGC(老年代垃圾回收次数)    FGCT(老年代垃圾回收消耗时间)     GCT(垃圾回收消耗总时间)   </span><br><span class="line">    <span class="number">47656.0</span>		  <span class="number">46746.4</span>  		 <span class="number">5928.0</span>   		<span class="number">5718.4</span>   		 <span class="number">175104.0</span>   		  <span class="number">28093.7</span>  		   <span class="number">27</span>    		 <span class="number">2</span>   		 	<span class="number">0.299</span> 		  	 <span class="number">0.682</span></span><br><span class="line">------------------------------------------------------------------------------------------------------------------------</span><br><span class="line">i). -compiler 输出JIT编译器编译过的方法、耗时等信息</span><br><span class="line">eg： jstat -compiler <span class="number">19830</span></span><br><span class="line">Compiled(编译数量) Failed(失败数量) Invalid(不可用数量)   Time(时间)   FailedType(失败类型) FailedMethod(失败的方法)</span><br><span class="line">    <span class="number">6788</span>     	 	<span class="number">1</span>       	<span class="number">0</span>  		 <span class="number">53.83</span>         	 <span class="number">1</span> 	org/springframework/core/annotation/AnnotationUtils 		findAnnotation</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>jinfo：Java配置信息工具</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">实时的查看和调整虚拟机各项参数</span><br><span class="line">eg: jinfo [options] [pid]</span><br><span class="line">Usage:</span><br><span class="line">    jinfo [option] &lt;pid&gt;</span><br><span class="line">        (to connect to running process)</span><br><span class="line">    jinfo [option] &lt;executable &lt;core&gt;</span><br><span class="line">        (to connect to a core file)</span><br><span class="line">    jinfo [option] [server_id@]&lt;remote server IP or hostname&gt;</span><br><span class="line">        (to connect to remote debug server)</span><br><span class="line"></span><br><span class="line">where &lt;option&gt; is one of:</span><br><span class="line">    -flag &lt;name&gt;         to print the value of the named VM flag</span><br><span class="line">    -flag [+|-]&lt;name&gt;    to enable or disable the named VM flag</span><br><span class="line">    -flag &lt;name&gt;=&lt;value&gt; to set the named VM flag to the given value</span><br><span class="line">    -flags               to print VM flags</span><br><span class="line">    -sysprops            to print Java system properties</span><br><span class="line">    &lt;no option&gt;          to print both of the above</span><br><span class="line">    -h | -help           to print <span class="keyword">this</span> help message</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>jmap:Java内存映像工具</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">Usage:</span><br><span class="line">    jmap [option] &lt;pid&gt;</span><br><span class="line">        (to connect to running process)</span><br><span class="line">    jmap [option] &lt;executable &lt;core&gt;</span><br><span class="line">        (to connect to a core file)</span><br><span class="line">    jmap [option] [server_id@]&lt;remote server IP or hostname&gt;</span><br><span class="line">        (to connect to remote debug server)</span><br><span class="line"></span><br><span class="line">where &lt;option&gt; is one of:</span><br><span class="line">    &lt;none&gt;               to print same info as Solaris pmap</span><br><span class="line">    -heap                to print java heap summary</span><br><span class="line">    -histo[:live]        to print histogram of java object heap; <span class="keyword">if</span> the <span class="string">"live"</span></span><br><span class="line">                         suboption is specified, only count live objects</span><br><span class="line">    -clstats             to print <span class="class"><span class="keyword">class</span> <span class="title">loader</span> <span class="title">statistics</span></span></span><br><span class="line"><span class="class">    -<span class="title">finalizerinfo</span>       <span class="title">to</span> <span class="title">print</span> <span class="title">information</span> <span class="title">on</span> <span class="title">objects</span> <span class="title">awaiting</span> <span class="title">finalization</span></span></span><br><span class="line">    -dump:&lt;dump-options&gt; to dump java heap in hprof binary format</span><br><span class="line">                         dump-options:</span><br><span class="line">                           live         dump only live objects; <span class="keyword">if</span> not specified,</span><br><span class="line">                                        all objects in the heap are dumped.</span><br><span class="line">                           format=b     binary format</span><br><span class="line">                           file=&lt;file&gt;  dump heap to &lt;file&gt;</span><br><span class="line">                         Example: jmap -dump:live,format=b,file=heap.bin &lt;pid&gt;</span><br><span class="line">    -F                   force. Use with -dump:&lt;dump-options&gt; &lt;pid&gt; or -histo</span><br><span class="line">                         to force a heap dump or histogram when &lt;pid&gt; does not</span><br><span class="line">                         respond. The <span class="string">"live"</span> suboption is not supported</span><br><span class="line">                         in <span class="keyword">this</span> mode.</span><br><span class="line">    -h | -help           to print <span class="keyword">this</span> help message</span><br><span class="line">    -J&lt;flag&gt;             to pass &lt;flag&gt; directly to the runtime system</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">eg: jmap -dump:format=b,file=/root/dump.bin <span class="number">19830</span></span><br><span class="line">Dumping heap to /root/dump.bin ...</span><br><span class="line">Heap dump file created</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li><p><code>jhat:虚拟机堆转储快照分析工具</code></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">jhat dump.bin</span><br><span class="line">Reading from dump.bin...</span><br><span class="line">Dump file created Sun Jul <span class="number">29</span> <span class="number">19</span>:<span class="number">56</span>:<span class="number">51</span> CST <span class="number">2018</span></span><br><span class="line">Snapshot read, resolving...</span><br><span class="line">Resolving <span class="number">592589</span> objects...</span><br><span class="line">Chasing references, expect <span class="number">118</span> dots......................................................................................................................</span><br><span class="line">Eliminating duplicate references......................................................................................................................</span><br><span class="line">Snapshot resolved.</span><br><span class="line">Started HTTP server on port <span class="number">7000</span></span><br><span class="line">Server is ready.</span><br><span class="line">通常使用VisualVM去分析jmap dump下来的bin文件</span><br></pre></td></tr></table></figure>
+</li>
+<li><p><code>jstack:Java堆栈跟踪工具</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">jstack 用于生成虚拟机当前时刻的线程快照</span><br><span class="line">Usage:</span><br><span class="line">    jstack [-l] &lt;pid&gt;</span><br><span class="line">        (to connect to running process)</span><br><span class="line">    jstack -F [-m] [-l] &lt;pid&gt;</span><br><span class="line">        (to connect to a hung process)</span><br><span class="line">    jstack [-m] [-l] &lt;executable&gt; &lt;core&gt;</span><br><span class="line">        (to connect to a core file)</span><br><span class="line">    jstack [-m] [-l] [server_id@]&lt;remote server IP or hostname&gt;</span><br><span class="line">        (to connect to a remote debug server)</span><br><span class="line"></span><br><span class="line">Options:</span><br><span class="line">    -F  to force a thread dump. Use when jstack &lt;pid&gt; does not respond (process is hung)</span><br><span class="line">    -m  to print both java and native frames (mixed mode)</span><br><span class="line">    -l  long listing. Prints additional information about locks</span><br><span class="line">    -h or -help to print this help message</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/07/29/Java虚拟机命令/" data-id="cjkmfoj4x0003xgqfrm2uzwti" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java虚拟机/">Java虚拟机</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2018/08/09/深入理解HashMap/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          深入理解HashMap
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/07/记一次MySQL死锁问题/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">记一次MySQL死锁问题</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Fastdfs/">Fastdfs</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Gitblit/">Gitblit</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java虚拟机/">Java虚拟机</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/RSA加密/">RSA加密</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Redis/">Redis</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Shell/">Shell</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/kafka/">kafka</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/nginx/">nginx</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签云</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Fastdfs/" style="font-size: 10px;">Fastdfs</a> <a href="/tags/Gitblit/" style="font-size: 10px;">Gitblit</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Java虚拟机/" style="font-size: 10px;">Java虚拟机</a> <a href="/tags/Linux/" style="font-size: 20px;">Linux</a> <a href="/tags/MySQL/" style="font-size: 13.33px;">MySQL</a> <a href="/tags/RSA加密/" style="font-size: 10px;">RSA加密</a> <a href="/tags/Redis/" style="font-size: 10px;">Redis</a> <a href="/tags/Shell/" style="font-size: 13.33px;">Shell</a> <a href="/tags/kafka/" style="font-size: 10px;">kafka</a> <a href="/tags/nginx/" style="font-size: 10px;">nginx</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/08/">八月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/07/">七月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/06/">六月 2018</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/04/">四月 2018</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2018/08/09/深入理解HashMap/">深入理解HashMap</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/29/Java虚拟机命令/">Java虚拟机命令</a>
+          </li>
+        
+          <li>
+            <a href="/2018/07/07/记一次MySQL死锁问题/">记一次MySQL死锁问题</a>
+          </li>
+        
+          <li>
+            <a href="/2018/06/20/自定义git触发编译脚本/">自定义git触发编译脚本</a>
+          </li>
+        
+          <li>
+            <a href="/2018/04/29/Linux各种命令/">Linux各种命令</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018 刘顺秋<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
